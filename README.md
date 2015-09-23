@@ -1,3 +1,7 @@
+Notes
+==========
+Original repository: https://github.com/lukeweber/webrtc-jingle-client.git
+
 Deprecated
 ==========
 This project began when webrtc was just getting it's start and there were many bugs and sdp implementation wasn't even code complete, and drivers for the different phones weren't working and the build for ios/android was broken from one version to another, and the code wasn't even compatible at times with native builds for hundreds of revisions. I built this project out of a necessity to have a more stable project, that was cut down and had the right build variables for the native project, i.e. video didn't work, so I removed it. Over time, many issues have been sovled in the core, and I've moved on to other projects after launching a voip solution on this codebase quite a while ago.
@@ -31,7 +35,7 @@ Discussion: [webrtc-jingle](https://groups.google.com/forum/?fromgroups#!forum/w
 
 # mkdir webrtcjingleproject
 # cd webrtcjingleproject
-# gclient config https://github.com/lukeweber/webrtc-jingle-client.git --name trunk
+# gclient config https://github.com/xnuxer/webrtc-jingle-client.git --name trunk
 # gclient sync
 
 or for an older stable build, take the head of the stable branch revision.
@@ -51,12 +55,13 @@ or for an older stable build, take the head of the stable branch revision.
 #Android
 export ANDROID_SDK_ROOT=/path/to/sdk/
 export ANDROID_NDK_ROOT=/path/to/ndk/
-export PATH=$PATH:$ANDROID_NDK_ROOT:$ANDROID_SDK_ROOT:$ANDROID_SDK_ROOT/platform-tools
 
 #mvn variables
+export M2_HOME=/path/to/maven/
 export ANDROID_HOME=$ANDROID_SDK_ROOT
 export ANDROID_NDK_HOME=$ANDROID_NDK_ROOT
-```
+
+export PATH=$PATH:$ANDROID_NDK_ROOT:$ANDROID_SDK_ROOT:$ANDROID_SDK_ROOT/platform-tools:$M2_HOME/bin
 
 ### Running the project
 
