@@ -63,6 +63,7 @@ export ANDROID_NDK_HOME=$ANDROID_NDK_ROOT
 
 export PATH=$PATH:$ANDROID_NDK_ROOT:$ANDROID_SDK_ROOT:$ANDROID_SDK_ROOT/platform-tools:$M2_HOME/bin
 
+```
 ### Running the project
 
 * Build, deploy to phone, and start debugger in one script: tools/badit_android.py
